@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flag, Trophy, Award, ShieldAlert, Terminal, Sparkles, CheckCircle2 } from 'lucide-react';
+import { Flag, Trophy, Award, ShieldAlert, Terminal, Sparkles, CheckCircle2, ExternalLink } from 'lucide-react';
 import { hackathonsAndCyber } from '../data/portfolioData';
 
 const iconMap = {
@@ -59,6 +59,40 @@ const Hackathons = () => {
                   <p className="text-slate-300 text-sm leading-relaxed font-light">
                     {activity.description}
                   </p>
+
+                  {/* Recently Participated CTF Highlight */}
+                  {activity.recentParticipation && (
+                    <div className="mt-4 p-4 rounded-2xl bg-cyan-950/30 border border-cyan-500/30 space-y-2.5">
+                      <div className="flex items-center justify-between gap-2 flex-wrap">
+                        <span className="inline-flex items-center gap-1.5 text-[11px] font-mono-code text-cyan-400 font-semibold">
+                          <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+                          {activity.recentParticipation.badge}
+                        </span>
+                        <span className="text-[10px] font-mono-code px-2 py-0.5 rounded-md bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 font-semibold">
+                          {activity.recentParticipation.rank}
+                        </span>
+                      </div>
+                      <h4 className="text-sm font-bold text-slate-100">
+                        {activity.recentParticipation.title}
+                      </h4>
+                      <p className="text-xs text-slate-300 font-light leading-relaxed">
+                        {activity.recentParticipation.description}
+                      </p>
+                      {activity.recentParticipation.url && (
+                        <div className="pt-1">
+                          <a
+                            href={activity.recentParticipation.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 text-xs font-mono-code text-cyan-400 hover:text-cyan-300 group/link"
+                          >
+                            <span>View LinkedIn Post</span>
+                            <ExternalLink className="w-3.5 h-3.5 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+                          </a>
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </div>
 
                 {/* Tags */}

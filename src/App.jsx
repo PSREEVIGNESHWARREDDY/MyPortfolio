@@ -5,8 +5,6 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Education from './components/Education';
 import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Hackathons from './components/Hackathons';
 import Hobbies from './components/Hobbies';
 import Achievements from './components/Achievements';
 import SocialLinks from './components/SocialLinks';
@@ -28,8 +26,6 @@ function App() {
         <About />
         <Education />
         <Skills />
-        <Projects />
-        <Hackathons />
         <Hobbies />
         <Achievements />
         <SocialLinks />

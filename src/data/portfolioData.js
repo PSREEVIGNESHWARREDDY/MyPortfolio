@@ -21,7 +21,9 @@ export const personalInfo = {
   specialization: "Cyber Security",
   email: "sreevigneshwarreddyp@gmail.com",
   github: "https://github.com/PSREEVIGNESHWARREDDY",
-  linkedin: "https://linkedin.com/in/p-sv-reddy"
+  linkedin: "https://linkedin.com/in/p-sv-reddy",
+  leetcode: "https://leetcode.com/u/p_sv_reddy2007/",
+  leetcodeUsername: "p_sv_reddy2007"
 };
 
 export const socialLinks = [
@@ -204,9 +206,16 @@ export const hackathonsAndCyber = {
       category: "CTF Competitions",
       title: "Capture The Flag (CTF) Participation",
       event: "Jeopardy & Attack-Defense CTFs",
-      description: "Actively solving challenges in web security, cryptography, reverse engineering fundamentals, and digital forensics during collegiate and online CTF events.",
+      description: "Actively solving challenges in web security, cryptography, reverse engineering fundamentals, and digital forensics during collegiate and national CTF events.",
       icon: "Flag",
-      tags: ["Web Security", "Crypto", "Forensics", "CTF"]
+      tags: ["GOPWNIT CTF 2026", "WARZONE 4.0", "Web Security", "Crypto", "Forensics"],
+      recentParticipation: {
+        badge: "Recently Participated",
+        title: "GOPWNIT CTF 2026",
+        rank: "100th Place",
+        description: "Secured 100th place in GOPWNIT CTF 2026, putting cybersecurity knowledge, problem-solving skills, and defensive/offensive strategies to test under competitive time constraints.",
+        url: "https://www.linkedin.com/posts/p-sv-reddy_gopwnitctf2026-ctf-cybersecurity-share-7515471581154869248-vIf4/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7515471582606311425&highlightedUpdateType=SOCIAL_SHARE&origin=SOCIAL_SHARE&utm_source=share&utm_medium=member_desktop&rcm=ACoAAF6Th_sBVylUiKMI_z-2vSamyXOXnmGsQJw"
+      }
     },
     {
       id: "hackathons",
@@ -368,26 +377,23 @@ export const photographyCategories = [
 
 export const achievementsCategories = [
   {
-    id: "hackathons",
-    title: "Hackathon Achievements",
-    icon: "Trophy",
-    items: [
-      {
-        title: "Hackathon Participation & Team Building",
-        detail: "Placeholder for upcoming hackathon accolades, project presentations, and awards.",
-        isPlaceholder: true
-      }
-    ]
-  },
-  {
     id: "ctf",
     title: "CTF Rankings & Security",
     icon: "ShieldAlert",
     items: [
       {
-        title: "CTF Leaderboards & Scorecards",
-        detail: "Placeholder for CTF match rankings, challenge badges, and platform profiles.",
-        isPlaceholder: true
+        title: "WARZONE 4.0 CTF – 2nd Place 🥈",
+        badge: "2nd Place",
+        detail: "Secured 2nd place in the WARZONE 4.0 CTF competition with team tr!n3tr@. Solved challenges across digital forensics, reverse engineering, cryptography, network analysis, and incident response under timed pressure.",
+        url: "https://www.linkedin.com/posts/p-sv-reddy_tr-cybersecurity-ctf-ugcPost-7507348252652900352-yLMk/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7507348253852565505&highlightedUpdateType=SOCIAL_SHARE&origin=SOCIAL_SHARE&utm_source=share&utm_medium=member_desktop&rcm=ACoAAF6Th_sBVylUiKMI_z-2vSamyXOXnmGsQJw",
+        isPlaceholder: false
+      },
+      {
+        title: "GOPWNIT CTF 2026 – Top 100 Finish 🏆",
+        badge: "100th Place",
+        detail: "Secured 100th place in GOPWNIT CTF 2026, demonstrating practical offensive and defensive skills across diverse challenge categories.",
+        url: "https://www.linkedin.com/posts/p-sv-reddy_gopwnitctf2026-ctf-cybersecurity-share-7515471581154869248-vIf4/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7515471582606311425&highlightedUpdateType=SOCIAL_SHARE&origin=SOCIAL_SHARE&utm_source=share&utm_medium=member_desktop&rcm=ACoAAF6Th_sBVylUiKMI_z-2vSamyXOXnmGsQJw",
+        isPlaceholder: false
       }
     ]
   },
@@ -397,45 +403,20 @@ export const achievementsCategories = [
     icon: "CodeCheck",
     items: [
       {
-        title: "Competitive Coding Milestones",
-        detail: "Placeholder for platform ratings (LeetCode, HackerRank, CodeChef) and contest scores.",
-        isPlaceholder: true
-      }
-    ]
-  },
-  {
-    id: "certifications",
-    title: "Certifications & Badges",
-    icon: "Medal",
-    items: [
+        title: "Top 100 Coders 3.0 – 34th Position 🏆",
+        badge: "Rank 34",
+        detail: "Secured 34th position in Top 100 Coders 3.0, conducted by Krithomedh (student chapter of Dept. of CSE–AIML & IoT, R&AI at VNRVJIET), competing across complex algorithmic problems and logical challenges.",
+        url: "https://www.linkedin.com/posts/p-sv-reddy_top100coders-top100coders3-vnrvjiet-share-7516887119106183168-DKqm/?highlightedUpdateUrn=urn%3Ali%3Aactivity%3A7516887120431742976&highlightedUpdateType=SOCIAL_SHARE&origin=SOCIAL_SHARE&utm_source=share&utm_medium=member_desktop&rcm=ACoAAF6Th_sBVylUiKMI_z-2vSamyXOXnmGsQJw",
+        isPlaceholder: false
+      },
       {
-        title: "Professional Security & Dev Certifications",
-        detail: "Placeholder for course certificates, cloud security badges, and technical credentials.",
-        isPlaceholder: true
-      }
-    ]
-  },
-  {
-    id: "competitions",
-    title: "Technical Competitions",
-    icon: "Zap",
-    items: [
-      {
-        title: "Inter-College & Departmental Events",
-        detail: "Placeholder for technical paper presentations, quiz competitions, and coding sprints.",
-        isPlaceholder: true
-      }
-    ]
-  },
-  {
-    id: "academic",
-    title: "Academic Achievements",
-    icon: "GraduationCap",
-    items: [
-      {
-        title: "VNRVJIET Academic Milestones",
-        detail: "Placeholder for academic honors, merit recognitions, and department achievements.",
-        isPlaceholder: true
+        title: "LeetCode Live Profile & Metrics 🎯",
+        badge: "198+ Solved • Rating 1,557",
+        detail: "Live competitive programming statistics synchronized directly from LeetCode. Solved across C++, Java, and Python with 50 Days Consistency Badge.",
+        url: "https://leetcode.com/u/p_sv_reddy2007/",
+        isLeetCodeLive: true,
+        username: "p_sv_reddy2007",
+        isPlaceholder: false
       }
     ]
   }

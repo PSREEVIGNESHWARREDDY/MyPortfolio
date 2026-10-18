@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import {
   Shield,
   MapPin,
@@ -8,7 +9,9 @@ import {
   Code2,
   Lock,
   Camera,
-  Mail
+  Mail,
+  Trophy,
+  Flame
 } from 'lucide-react';
 import { personalInfo, socialLinks } from '../data/portfolioData';
 import { InstagramIcon, GithubIcon, LinkedinIcon } from './SocialBrandIcons';
@@ -20,7 +23,24 @@ const iconMap = {
   Mail: Mail
 };
 
+const terminalLogs = [
+  { cmd: 'whoami', out: 'Patharched Sree Vigneshwar Reddy • Cyber Security' },
+  { cmd: 'cat achievements.log', out: '🥈 2nd Place @ WARZONE 4.0 CTF (tr!n3tr@)' },
+  { cmd: 'nmap -sV skills', out: 'C++, Python, Java, Cryptography, CTFs, DSA' },
+  { cmd: 'leetcode --stats', out: '198+ Problems Solved • Contest Rating 1,557' },
+  { cmd: 'status --active', out: 'Rank 34 Top 100 Coders • 100th GOPWNIT CTF' }
+];
+
 const Hero = () => {
+  const [logIndex, setLogIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setLogIndex((prev) => (prev + 1) % terminalLogs.length);
+    }, 3200);
+    return () => clearInterval(timer);
+  }, []);
+
   const handleScrollTo = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -80,12 +100,12 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap items-center gap-4 pt-4">
-              {/* Explore My Work Button */}
+              {/* Explore Skills Button */}
               <button
-                onClick={() => handleScrollTo('projects')}
+                onClick={() => handleScrollTo('skills')}
                 className="group relative px-6 py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-slate-950 font-bold text-sm tracking-wide shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center gap-2 cursor-pointer"
               >
-                <span>Explore My Work</span>
+                <span>Explore Skills & Tech</span>
                 <ArrowRight className="w-4 h-4 text-slate-950 group-hover:translate-x-1 transition-transform" />
               </button>
 
@@ -97,10 +117,19 @@ const Hero = () => {
                 <Send className="w-4 h-4 text-cyan-400 group-hover:rotate-12 transition-transform" />
                 <span>Connect With Me</span>
               </button>
+
+              {/* View Milestones Quick Action */}
+              <button
+                onClick={() => handleScrollTo('achievements')}
+                className="group px-5 py-3.5 rounded-xl bg-slate-900/80 hover:bg-slate-800 border border-slate-800 hover:border-cyan-500/30 text-slate-300 hover:text-cyan-300 font-medium text-sm tracking-wide transition-all flex items-center gap-2 cursor-pointer"
+              >
+                <Trophy className="w-4 h-4 text-amber-400 group-hover:scale-110 transition-transform" />
+                <span>View Milestones</span>
+              </button>
             </div>
 
             {/* Quick Direct Social Links */}
-            <div className="flex items-center gap-3 pt-2">
+            <div className="flex items-center gap-3 pt-2 flex-wrap">
               <span className="text-xs font-mono-code text-slate-500">Profiles:</span>
               <div className="flex items-center gap-2">
                 {socialLinks.map((item) => {
@@ -120,6 +149,16 @@ const Hero = () => {
                     </a>
                   ) : null;
                 })}
+                <a
+                  href="https://leetcode.com/u/p_sv_reddy2007/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LeetCode Profile"
+                  title="LeetCode: @p_sv_reddy2007"
+                  className="w-9 h-9 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-amber-400 text-slate-400 hover:text-amber-300 flex items-center justify-center transition-all hover:scale-110 shadow-sm"
+                >
+                  <Flame className="w-4 h-4" />
+                </a>
               </div>
             </div>
           </div>
@@ -145,11 +184,23 @@ const Hero = () => {
                 </div>
               </div>
 
+              {/* Dynamic Cycling Terminal Console */}
+              <div className="bg-slate-950/90 p-3.5 rounded-2xl border border-cyan-500/30 font-mono-code text-xs space-y-1.5 shadow-inner">
+                <div className="flex items-center gap-1.5 text-cyan-400 text-[11px]">
+                  <span className="text-pink-400">vigneshwar@vnrvjiet:~$</span>
+                  <span className="text-slate-100 font-semibold">{terminalLogs[logIndex].cmd}</span>
+                  <span className="w-1.5 h-3.5 bg-cyan-400 animate-pulse inline-block align-middle" />
+                </div>
+                <p className="text-emerald-400 pl-2.5 border-l-2 border-emerald-500/50 text-[11px] leading-relaxed">
+                  ➜ {terminalLogs[logIndex].out}
+                </p>
+              </div>
+
               {/* Profile Highlight Badge Grid */}
-              <div className="space-y-4 font-mono-code text-xs">
-                <div className="bg-slate-950/60 p-3.5 rounded-xl border border-slate-800/80 flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 shrink-0">
-                    <Shield className="w-5 h-5" />
+              <div className="space-y-3 font-mono-code text-xs">
+                <div className="bg-slate-950/60 p-3 rounded-xl border border-slate-800/80 flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 shrink-0">
+                    <Shield className="w-4 h-4" />
                   </div>
                   <div>
                     <span className="text-slate-400 block text-[10px]">MAJOR FOCUS</span>
@@ -157,9 +208,9 @@ const Hero = () => {
                   </div>
                 </div>
 
-                <div className="bg-slate-950/60 p-3.5 rounded-xl border border-slate-800/80 flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-lg bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 shrink-0">
-                    <Code2 className="w-5 h-5" />
+                <div className="bg-slate-950/60 p-3 rounded-xl border border-slate-800/80 flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-lg bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 shrink-0">
+                    <Code2 className="w-4 h-4" />
                   </div>
                   <div>
                     <span className="text-slate-400 block text-[10px]">DEVELOPMENT</span>
@@ -167,9 +218,9 @@ const Hero = () => {
                   </div>
                 </div>
 
-                <div className="bg-slate-950/60 p-3.5 rounded-xl border border-slate-800/80 flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-lg bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 shrink-0">
-                    <Lock className="w-5 h-5" />
+                <div className="bg-slate-950/60 p-3 rounded-xl border border-slate-800/80 flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-lg bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 shrink-0">
+                    <Lock className="w-4 h-4" />
                   </div>
                   <div>
                     <span className="text-slate-400 block text-[10px]">PRACTICE</span>
@@ -177,9 +228,9 @@ const Hero = () => {
                   </div>
                 </div>
 
-                <div className="bg-slate-950/60 p-3.5 rounded-xl border border-slate-800/80 flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shrink-0">
-                    <Camera className="w-5 h-5" />
+                <div className="bg-slate-950/60 p-3 rounded-xl border border-slate-800/80 flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shrink-0">
+                    <Camera className="w-4 h-4" />
                   </div>
                   <div>
                     <span className="text-slate-400 block text-[10px]">CREATIVE PASSION</span>
@@ -192,7 +243,7 @@ const Hero = () => {
               <div className="pt-2 flex items-center justify-between text-[11px] font-mono-code text-slate-400 border-t border-slate-800/60">
                 <span className="flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                  Open for Hackathons & Projects
+                  Open for CTFs & Projects
                 </span>
                 <span className="text-cyan-400/90 font-bold">2026</span>
               </div>
@@ -200,6 +251,78 @@ const Hero = () => {
           </div>
 
         </div>
+
+        {/* Cyber Impact Metrics Ribbon */}
+        <div className="mt-16 pt-10 border-t border-slate-800/80 grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="glass-card rounded-2xl p-5 border border-cyan-500/25 hover:border-cyan-400/60 transition-all text-left group hover:-translate-y-1 duration-200 shadow-lg shadow-cyan-500/5">
+            <span className="text-[10px] font-mono-code text-cyan-400 uppercase tracking-wider block font-semibold">
+              WARZONE 4.0 CTF
+            </span>
+            <div className="flex items-baseline gap-1 mt-1">
+              <span className="text-2xl sm:text-3xl font-black text-slate-100 group-hover:text-cyan-300 transition-colors">
+                2nd
+              </span>
+              <span className="text-xs font-mono-code text-emerald-400 font-bold">
+                Place 🥈
+              </span>
+            </div>
+            <span className="text-[11px] font-mono-code text-slate-400 block mt-1">
+              Team tr!n3tr@ Podium
+            </span>
+          </div>
+
+          <div className="glass-card rounded-2xl p-5 border border-cyan-500/25 hover:border-cyan-400/60 transition-all text-left group hover:-translate-y-1 duration-200 shadow-lg shadow-cyan-500/5">
+            <span className="text-[10px] font-mono-code text-cyan-400 uppercase tracking-wider block font-semibold">
+              TOP 100 CODERS 3.0
+            </span>
+            <div className="flex items-baseline gap-1 mt-1">
+              <span className="text-2xl sm:text-3xl font-black text-slate-100 group-hover:text-cyan-300 transition-colors">
+                #34
+              </span>
+              <span className="text-xs font-mono-code text-amber-400 font-bold">
+                Rank 🏆
+              </span>
+            </div>
+            <span className="text-[11px] font-mono-code text-slate-400 block mt-1">
+              VNRVJIET Krithomedh
+            </span>
+          </div>
+
+          <div className="glass-card rounded-2xl p-5 border border-cyan-500/25 hover:border-cyan-400/60 transition-all text-left group hover:-translate-y-1 duration-200 shadow-lg shadow-cyan-500/5">
+            <span className="text-[10px] font-mono-code text-cyan-400 uppercase tracking-wider block font-semibold">
+              LEETCODE SOLVED
+            </span>
+            <div className="flex items-baseline gap-1 mt-1">
+              <span className="text-2xl sm:text-3xl font-black text-slate-100 group-hover:text-cyan-300 transition-colors">
+                198+
+              </span>
+              <span className="text-xs font-mono-code text-emerald-400 font-bold">
+                AC 🎯
+              </span>
+            </div>
+            <span className="text-[11px] font-mono-code text-slate-400 block mt-1">
+              Rating 1,557 • Top 31%
+            </span>
+          </div>
+
+          <div className="glass-card rounded-2xl p-5 border border-cyan-500/25 hover:border-cyan-400/60 transition-all text-left group hover:-translate-y-1 duration-200 shadow-lg shadow-cyan-500/5">
+            <span className="text-[10px] font-mono-code text-cyan-400 uppercase tracking-wider block font-semibold">
+              GOPWNIT CTF 2026
+            </span>
+            <div className="flex items-baseline gap-1 mt-1">
+              <span className="text-2xl sm:text-3xl font-black text-slate-100 group-hover:text-cyan-300 transition-colors">
+                #100
+              </span>
+              <span className="text-xs font-mono-code text-cyan-400 font-bold">
+                Rank 🛡️
+              </span>
+            </div>
+            <span className="text-[11px] font-mono-code text-slate-400 block mt-1">
+              National CTF Competitor
+            </span>
+          </div>
+        </div>
+
       </div>
     </section>
   );

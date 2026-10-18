@@ -50,7 +50,7 @@ const SocialLinks = () => {
         <div className="flex flex-col items-center text-center space-y-3 mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-mono-code">
             <Shield className="w-3.5 h-3.5" />
-            <span>08. SOCIAL PROFILES</span>
+            <span>06. SOCIAL PROFILES</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-100 tracking-tight">
             Connect & Follow Online

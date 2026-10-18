@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send, CheckCircle2, AlertCircle, Mail, MapPin, GraduationCap, Shield, Terminal, Info } from 'lucide-react';
+import { Send, CheckCircle2, AlertCircle, Mail, MapPin, GraduationCap, Shield, Terminal } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
 
 const Contact = () => {
@@ -64,7 +64,7 @@ const Contact = () => {
         <div className="flex flex-col items-center text-center space-y-3 mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-mono-code">
             <Mail className="w-3.5 h-3.5" />
-            <span>09. GET IN TOUCH</span>
+            <span>07. GET IN TOUCH</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-100 tracking-tight">
             Connect With Patharched Sree Vigneshwar Reddy
@@ -133,10 +133,10 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="p-4 rounded-2xl bg-cyan-950/20 border border-cyan-500/20 text-xs text-cyan-300/90 leading-relaxed font-mono-code flex items-start gap-2">
-                <Info className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
+              <div className="p-4 rounded-2xl bg-cyan-950/20 border border-cyan-500/20 text-xs text-cyan-300/90 leading-relaxed font-mono-code flex items-start gap-2.5">
+                <Shield className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
                 <div>
-                  <strong>Integration Note:</strong> This form features full frontend validation. You can connect standard services like EmailJS, Formspree, or custom FastAPI endpoints directly in <code className="text-cyan-300">src/components/Contact.jsx</code>.
+                  <strong className="text-cyan-300">Open for Collaborations:</strong> Interested in forming a CTF team, collaborating on cybersecurity research, or discussing hackathon ideas? Feel free to reach out via the form or directly through LinkedIn or Email!
                 </div>
               </div>
             </div>
@@ -250,7 +250,7 @@ const Contact = () => {
                 <div className="mt-6 p-4 rounded-2xl bg-emerald-950/40 border border-emerald-500/40 text-emerald-300 text-xs font-mono-code flex items-start gap-2.5 animate-in fade-in">
                   <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
                   <div>
-                    <strong>Validation Successful!</strong> Your message payload passed all frontend checks. Connect your EmailJS or backend key in <code className="text-emerald-200">Contact.jsx</code> for live automated email dispatching.
+                    <strong>Message Received!</strong> Thank you for reaching out. I'll get back to you promptly. You can also reach me directly at <a href={`mailto:${personalInfo.email}`} className="underline text-emerald-200">{personalInfo.email}</a>.
                   </div>
                 </div>
               )}

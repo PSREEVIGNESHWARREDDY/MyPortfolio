@@ -3,7 +3,6 @@ import {
   FolderGit2,
   ExternalLink,
   Shield,
-  Lock,
   Layers,
   Sparkles,
   ChevronRight
@@ -110,22 +109,15 @@ const Projects = () => {
 
                 {/* Action Links (Conditional Rendering) */}
                 <div className="flex flex-wrap items-center gap-4 pt-4 border-t border-slate-800">
-                  {project.githubUrl ? (
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 text-xs font-mono-code flex items-center gap-2 transition-all"
-                    >
-                      <GithubIcon className="w-4 h-4 text-cyan-400" />
-                      <span>View Repository</span>
-                    </a>
-                  ) : (
-                    <span className="text-xs font-mono-code text-slate-500 bg-slate-900/60 px-3 py-2 rounded-xl border border-slate-800 flex items-center gap-1.5">
-                      <Lock className="w-3.5 h-3.5 text-slate-500" />
-                      Repository Link Pending Deployment
-                    </span>
-                  )}
+                  <a
+                    href={project.githubUrl || "https://github.com/PSREEVIGNESHWARREDDY"}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 text-xs font-mono-code flex items-center gap-2 transition-all hover:border-cyan-400 group"
+                  >
+                    <GithubIcon className="w-4 h-4 text-cyan-400 group-hover:scale-110 transition-transform" />
+                    <span>{project.githubUrl ? 'View Repository' : 'Explore on GitHub'}</span>
+                  </a>
 
                   {project.liveUrl && (
                     <a
@@ -154,14 +146,14 @@ const Projects = () => {
           </div>
         ))}
 
-        {/* Secondary / Placeholder Projects Header */}
+        {/* Security Labs & Automation Tools Header */}
         <div className="mb-8 flex items-center justify-between">
           <h3 className="text-xl font-bold text-slate-100 flex items-center gap-2">
             <Layers className="w-5 h-5 text-cyan-400" />
-            <span>Additional Projects & Expansion Placeholders</span>
+            <span>Security Labs & Automation Tools</span>
           </h3>
           <span className="text-xs font-mono-code text-slate-400">
-            Ready for new repos & builds
+            Active development sandboxes & CTF tooling
           </span>
         </div>
 
