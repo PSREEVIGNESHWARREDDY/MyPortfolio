@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   Shield,
   MapPin,
@@ -8,9 +7,18 @@ import {
   Terminal,
   Code2,
   Lock,
-  Camera
+  Camera,
+  Mail
 } from 'lucide-react';
-import { personalInfo } from '../data/portfolioData';
+import { personalInfo, socialLinks } from '../data/portfolioData';
+import { InstagramIcon, GithubIcon, LinkedinIcon } from './SocialBrandIcons';
+
+const iconMap = {
+  Instagram: InstagramIcon,
+  Github: GithubIcon,
+  Linkedin: LinkedinIcon,
+  Mail: Mail
+};
 
 const Hero = () => {
   const handleScrollTo = (id) => {
@@ -89,6 +97,30 @@ const Hero = () => {
                 <Send className="w-4 h-4 text-cyan-400 group-hover:rotate-12 transition-transform" />
                 <span>Connect With Me</span>
               </button>
+            </div>
+
+            {/* Quick Direct Social Links */}
+            <div className="flex items-center gap-3 pt-2">
+              <span className="text-xs font-mono-code text-slate-500">Profiles:</span>
+              <div className="flex items-center gap-2">
+                {socialLinks.map((item) => {
+                  const IconComp = iconMap[item.icon] || Shield;
+                  const isMail = item.url.startsWith('mailto:');
+                  return item.isConfigured ? (
+                    <a
+                      key={item.name}
+                      href={item.url}
+                      target={isMail ? undefined : "_blank"}
+                      rel={isMail ? undefined : "noopener noreferrer"}
+                      aria-label={`Open ${item.name}`}
+                      title={`${item.name}: ${item.handle}`}
+                      className="w-9 h-9 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-cyan-400 text-slate-400 hover:text-cyan-300 flex items-center justify-center transition-all hover:scale-110 shadow-sm"
+                    >
+                      <IconComp className="w-4 h-4" />
+                    </a>
+                  ) : null;
+                })}
+              </div>
             </div>
           </div>
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Camera, ChevronLeft, ChevronRight, Image as ImageIcon } from 'lucide-react';
+import { X, Camera, ChevronLeft, ChevronRight } from 'lucide-react';
 import { photographyCategories } from '../data/portfolioData';
 
 const PhotoModal = ({ isOpen, onClose }) => {

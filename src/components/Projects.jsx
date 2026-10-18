@@ -4,12 +4,9 @@ import {
   ExternalLink,
   Shield,
   Lock,
-  FileCheck,
-  Server,
   Layers,
   Sparkles,
-  ChevronRight,
-  Info
+  ChevronRight
 } from 'lucide-react';
 import { GithubIcon } from './SocialBrandIcons';
 import { projectsData } from '../data/portfolioData';

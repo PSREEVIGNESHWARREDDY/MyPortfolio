@@ -1,6 +1,6 @@
 import React from 'react';
-import { GraduationCap, Calendar, MapPin, BookOpen, CheckCircle2, Milestone } from 'lucide-react';
-import { educationTimeline, personalInfo } from '../data/portfolioData';
+import { GraduationCap, Calendar, MapPin, CheckCircle2, Milestone } from 'lucide-react';
+import { educationTimeline } from '../data/portfolioData';
 
 const Education = () => {
   return (

@@ -18,10 +18,27 @@ export const personalInfo = {
   collegeShort: "VNRVJIET",
   location: "Hyderabad, Telangana, India",
   yearOfStudy: "2nd Year B.Tech",
-  specialization: "Cyber Security"
+  specialization: "Cyber Security",
+  email: "sreevigneshwarreddyp@gmail.com",
+  github: "https://github.com/PSREEVIGNESHWARREDDY",
+  linkedin: "https://linkedin.com/in/p-sv-reddy"
 };
 
 export const socialLinks = [
+  {
+    name: "GitHub",
+    url: "https://github.com/PSREEVIGNESHWARREDDY",
+    icon: "Github",
+    isConfigured: true,
+    handle: "github.com/PSREEVIGNESHWARREDDY"
+  },
+  {
+    name: "LinkedIn",
+    url: "https://linkedin.com/in/p-sv-reddy",
+    icon: "Linkedin",
+    isConfigured: true,
+    handle: "linkedin.com/in/p-sv-reddy"
+  },
   {
     name: "Instagram",
     url: "https://instagram.com/p_sv.reddy2007",
@@ -30,25 +47,11 @@ export const socialLinks = [
     handle: "@p_sv.reddy2007"
   },
   {
-    name: "GitHub",
-    url: "#",
-    icon: "Github",
-    isConfigured: false,
-    handle: "github.com/vigneshwar-reddy (Placeholder)"
-  },
-  {
-    name: "LinkedIn",
-    url: "#",
-    icon: "Linkedin",
-    isConfigured: false,
-    handle: "linkedin.com/in/vigneshwar-reddy (Placeholder)"
-  },
-  {
     name: "Email",
-    url: "mailto:placeholder@vnrvjiet.in",
+    url: "mailto:sreevigneshwarreddyp@gmail.com",
     icon: "Mail",
-    isConfigured: false,
-    handle: "vigneshwar.reddy@example.com (Placeholder)"
+    isConfigured: true,
+    handle: "sreevigneshwarreddyp@gmail.com"
   }
 ];
 

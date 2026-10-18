@@ -43,13 +43,15 @@ const Footer = () => {
           <div className="flex items-center gap-3">
             {socialLinks.map((item) => {
               const IconComp = iconMap[item.icon] || Shield;
+              const isMail = item.url.startsWith('mailto:');
               return item.isConfigured ? (
                 <a
                   key={item.name}
                   href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target={isMail ? undefined : "_blank"}
+                  rel={isMail ? undefined : "noopener noreferrer"}
                   aria-label={item.name}
+                  title={`${item.name}: ${item.handle}`}
                   className="w-10 h-10 rounded-xl bg-slate-900 border border-cyan-500/30 hover:border-cyan-400 text-cyan-400 hover:text-cyan-300 flex items-center justify-center transition-all hover:scale-110 shadow-sm"
                 >
                   <IconComp className="w-4 h-4" />

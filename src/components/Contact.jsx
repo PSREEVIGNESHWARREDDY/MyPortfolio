@@ -95,6 +95,19 @@ const Contact = () => {
               </div>
 
               <div className="space-y-4 font-mono-code text-xs">
+                <a
+                  href={`mailto:${personalInfo.email}`}
+                  className="flex items-start gap-3 p-3.5 rounded-xl bg-slate-950/60 border border-slate-800 hover:border-cyan-500/50 hover:bg-slate-900/60 transition-all group"
+                >
+                  <Mail className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
+                  <div className="min-w-0">
+                    <span className="text-slate-500 block text-[10px]">EMAIL ADDRESS</span>
+                    <span className="text-slate-200 group-hover:text-cyan-300 transition-colors break-all">
+                      {personalInfo.email}
+                    </span>
+                  </div>
+                </a>
+
                 <div className="flex items-start gap-3 p-3.5 rounded-xl bg-slate-950/60 border border-slate-800">
                   <GraduationCap className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
                   <div>
