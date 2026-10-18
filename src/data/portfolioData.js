@@ -298,79 +298,103 @@ export const hobbies = [
 
 export const photographyCategories = [
   {
-    id: "landscape",
-    name: "Landscape",
-    title: "Landscape Photography",
-    description: "Wide vistas, natural scenery, and horizon compositions.",
+    id: "all",
+    name: "All Photos",
+    title: "All Photographs",
+    description: "Personal captures and moments through the lens by Patharched Sree Vigneshwar Reddy.",
     photos: [
-      {
-        url: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1000&q=80",
-        caption: "Serene mountain valley & lake reflection"
-      },
-      {
-        url: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1000&q=80",
-        caption: "Misty forest path at dawn"
-      }
+      { url: "/photos/17875177542575739.webp", caption: "Golden hour sunset over metro railway tracks" },
+      { url: "/photos/17887459131410470.webp", caption: "Farmer in rural paddy field waters at dusk" },
+      { url: "/photos/17903563782261174.webp", caption: "Atmospheric landscape and natural horizons" },
+      { url: "/photos/17930111360977428.webp", caption: "Serene scenic composition" },
+      { url: "/photos/17941089243197929.webp", caption: "Dramatic sky and horizon perspective" },
+      { url: "/photos/17952284729852603.webp", caption: "Quiet street moment and natural light" },
+      { url: "/photos/17953269681167581.webp", caption: "Candid perspective and framing" },
+      { url: "/photos/18030910946525648.webp", caption: "Architectural lines and geometry" },
+      { url: "/photos/18042486140329255.webp", caption: "Warm golden light reflections" },
+      { url: "/photos/18056337155399141.webp", caption: "Urban structural angles" },
+      { url: "/photos/18064513339864581.webp", caption: "Fine detail and contrast study" },
+      { url: "/photos/18067512137368704.webp", caption: "Architectural symmetry and shadows" },
+      { url: "/photos/18069214213950146.webp", caption: "Candid environmental portraiture" },
+      { url: "/photos/18073567424282112.webp", caption: "Urban depth of field" },
+      { url: "/photos/18079557575364463.webp", caption: "Everyday life in motion" },
+      { url: "/photos/18080240819386509.webp", caption: "Creative abstract lighting and shadows" },
+      { url: "/photos/18086763118990209.webp", caption: "Sunset silhouettes and amber gradients" },
+      { url: "/photos/18093806783335626.webp", caption: "Expansive natural landscape vistas" },
+      { url: "/photos/18095807021070069.webp", caption: "Sunburst and golden hour warmth" },
+      { url: "/photos/18108373270904728.webp", caption: "Modern architecture and facade lines" },
+      { url: "/photos/18117469765802740.webp", caption: "Minimalist composition and textures" },
+      { url: "/photos/18139463890419326.webp", caption: "Vivid dusk horizons and evening colors" },
+      { url: "/photos/18152733217498284.webp", caption: "Golden hour glow across the horizon" },
+      { url: "/photos/18209571103331147.webp", caption: "Artistic angle and moody lighting" },
+      { url: "/photos/18394223092146987.webp", caption: "Creative color palette and shadows" },
+      { url: "/photos/18552687721035748.webp", caption: "Reflective mood and twilight tones" }
     ]
   },
   {
     id: "sunset",
-    name: "Sunrise & Sunset",
-    title: "Golden Hour & Sunsets",
-    description: "Warm gradients, silhouetted horizons, and golden light.",
+    name: "Sunsets & Golden Hour",
+    title: "Sunrise & Sunset Photography",
+    description: "Warm gradients, golden light, and silhouetted horizons.",
     photos: [
-      {
-        url: "https://images.unsplash.com/photo-1495616811223-4d98c6e9c869?auto=format&fit=crop&w=1000&q=80",
-        caption: "Vibrant golden sunset horizon"
-      },
-      {
-        url: "https://images.unsplash.com/photo-1472120435266-53107fd0c44a?auto=format&fit=crop&w=1000&q=80",
-        caption: "Dusk sky over quiet shoreline"
-      }
+      { url: "/photos/17875177542575739.webp", caption: "Golden hour sunset over metro railway tracks" },
+      { url: "/photos/18042486140329255.webp", caption: "Warm golden light reflections" },
+      { url: "/photos/18086763118990209.webp", caption: "Sunset silhouettes and amber gradients" },
+      { url: "/photos/18095807021070069.webp", caption: "Sunburst and golden hour warmth" },
+      { url: "/photos/18139463890419326.webp", caption: "Vivid dusk horizons and evening colors" },
+      { url: "/photos/18152733217498284.webp", caption: "Golden hour glow across the horizon" }
+    ]
+  },
+  {
+    id: "landscape",
+    name: "Nature & Landscapes",
+    title: "Landscape Photography",
+    description: "Natural vistas, open horizons, and tranquil environments.",
+    photos: [
+      { url: "/photos/17887459131410470.webp", caption: "Farmer in rural paddy field waters at dusk" },
+      { url: "/photos/17903563782261174.webp", caption: "Atmospheric landscape and natural horizons" },
+      { url: "/photos/17930111360977428.webp", caption: "Serene scenic composition" },
+      { url: "/photos/17941089243197929.webp", caption: "Dramatic sky and horizon perspective" },
+      { url: "/photos/18093806783335626.webp", caption: "Expansive natural landscape vistas" }
     ]
   },
   {
     id: "architecture",
-    name: "Architecture",
-    title: "Architectural & Geometry",
-    description: "Lines, symmetry, modern structural perspectives, and shadows.",
+    name: "Architecture & Urban",
+    title: "Architectural & Geometric Perspectives",
+    description: "Structural symmetry, urban geometries, and building facades.",
     photos: [
-      {
-        url: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=80",
-        caption: "Symmetrical modern glass structure"
-      },
-      {
-        url: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80",
-        caption: "High-rise architectural geometry"
-      }
+      { url: "/photos/18030910946525648.webp", caption: "Architectural lines and geometry" },
+      { url: "/photos/18056337155399141.webp", caption: "Urban structural angles" },
+      { url: "/photos/18067512137368704.webp", caption: "Architectural symmetry and shadows" },
+      { url: "/photos/18073567424282112.webp", caption: "Urban depth of field" },
+      { url: "/photos/18108373270904728.webp", caption: "Modern architecture and facade lines" }
+    ]
+  },
+  {
+    id: "street",
+    name: "Street & Life",
+    title: "Street & Candid Moments",
+    description: "Candid glimpses into human life, work, and surroundings.",
+    photos: [
+      { url: "/photos/17952284729852603.webp", caption: "Quiet street moment and natural light" },
+      { url: "/photos/17953269681167581.webp", caption: "Candid perspective and framing" },
+      { url: "/photos/18064513339864581.webp", caption: "Fine detail and contrast study" },
+      { url: "/photos/18069214213950146.webp", caption: "Candid environmental portraiture" },
+      { url: "/photos/18079557575364463.webp", caption: "Everyday life in motion" }
     ]
   },
   {
     id: "creative",
-    name: "Creative",
-    title: "Creative & Abstract",
-    description: "Experimental angles, light play, and visual story concepts.",
+    name: "Creative & Abstract",
+    title: "Creative Perspectives",
+    description: "Artistic shadows, light play, and expressive framing.",
     photos: [
-      {
-        url: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1000&q=80",
-        caption: "Prism light reflections & cyber hues"
-      },
-      {
-        url: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&w=1000&q=80",
-        caption: "Abstract dark cyber neon aesthetic"
-      }
-    ]
-  },
-  {
-    id: "portrait",
-    name: "Portrait",
-    title: "Portrait Photography",
-    description: "Expressive subject framing, bokeh depth of field, and mood.",
-    photos: [
-      {
-        url: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1000&q=80",
-        caption: "Cinematic portrait lighting"
-      }
+      { url: "/photos/18080240819386509.webp", caption: "Creative abstract lighting and shadows" },
+      { url: "/photos/18117469765802740.webp", caption: "Minimalist composition and textures" },
+      { url: "/photos/18209571103331147.webp", caption: "Artistic angle and moody lighting" },
+      { url: "/photos/18394223092146987.webp", caption: "Creative color palette and shadows" },
+      { url: "/photos/18552687721035748.webp", caption: "Reflective mood and twilight tones" }
     ]
   }
 ];

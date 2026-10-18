@@ -80,15 +80,62 @@ const Hobbies = () => {
                   </div>
                 </div>
 
-                {/* Optional Gallery Action Button for Photography */}
+                {/* Optional Gallery Action Button & Preview for Photography */}
                 {hobby.hasModal && (
-                  <div className="pt-4 border-t border-slate-800/80">
+                  <div className="pt-4 border-t border-slate-800/80 space-y-3">
+                    <div className="grid grid-cols-4 gap-2 rounded-2xl overflow-hidden p-1.5 bg-slate-950/70 border border-slate-800/80">
+                      <div
+                        onClick={() => setPhotoModalOpen(true)}
+                        className="relative rounded-xl overflow-hidden group/thumb cursor-pointer aspect-square"
+                      >
+                        <img
+                          src="/photos/17875177542575739.webp"
+                          alt="Sunset Metro"
+                          className="w-full h-full object-cover group-hover/thumb:scale-110 transition-transform duration-300"
+                        />
+                        <div className="absolute inset-0 bg-cyan-500/10 opacity-0 group-hover/thumb:opacity-100 transition-opacity" />
+                      </div>
+                      <div
+                        onClick={() => setPhotoModalOpen(true)}
+                        className="relative rounded-xl overflow-hidden group/thumb cursor-pointer aspect-square"
+                      >
+                        <img
+                          src="/photos/17887459131410470.webp"
+                          alt="Paddy Field Dusk"
+                          className="w-full h-full object-cover group-hover/thumb:scale-110 transition-transform duration-300"
+                        />
+                        <div className="absolute inset-0 bg-cyan-500/10 opacity-0 group-hover/thumb:opacity-100 transition-opacity" />
+                      </div>
+                      <div
+                        onClick={() => setPhotoModalOpen(true)}
+                        className="relative rounded-xl overflow-hidden group/thumb cursor-pointer aspect-square"
+                      >
+                        <img
+                          src="/photos/18030910946525648.webp"
+                          alt="Architecture Geometry"
+                          className="w-full h-full object-cover group-hover/thumb:scale-110 transition-transform duration-300"
+                        />
+                        <div className="absolute inset-0 bg-cyan-500/10 opacity-0 group-hover/thumb:opacity-100 transition-opacity" />
+                      </div>
+                      <div
+                        onClick={() => setPhotoModalOpen(true)}
+                        className="relative rounded-xl overflow-hidden group/thumb cursor-pointer aspect-square"
+                      >
+                        <img
+                          src="/photos/18086763118990209.webp"
+                          alt="Golden Hour"
+                          className="w-full h-full object-cover group-hover/thumb:scale-110 transition-transform duration-300"
+                        />
+                        <div className="absolute inset-0 bg-cyan-500/10 opacity-0 group-hover/thumb:opacity-100 transition-opacity" />
+                      </div>
+                    </div>
+
                     <button
                       onClick={() => setPhotoModalOpen(true)}
                       className="w-full py-3 rounded-xl bg-gradient-to-r from-pink-500/20 to-purple-600/20 hover:from-pink-500/30 hover:to-purple-600/30 text-pink-300 border border-pink-500/40 text-xs font-mono-code flex items-center justify-center gap-2 transition-all cursor-pointer shadow-md shadow-pink-500/10"
                     >
                       <Eye className="w-4 h-4 text-pink-400" />
-                      <span>Explore Photography Lightbox Gallery</span>
+                      <span>Explore 26 Personal Photographs (Gallery)</span>
                     </button>
                   </div>
                 )}
